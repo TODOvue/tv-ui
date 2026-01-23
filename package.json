@@ -1,0 +1,69 @@
+{
+  "name": "@todovue/tv-ui",
+  "private": false,
+  "author": "Cristhian Daza",
+  "description": "UI component library for TODOvue application",
+  "license": "MIT",
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://ui.todovue.blog",
+  "repository": {
+    "name": "@todovue/tv-ui",
+    "type": "git",
+    "url": "git+https://github.com/TODOvue/tv-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TODOvue/tv-ui/issues"
+  },
+  "keywords": [
+    "todovue",
+    "front-end",
+    "web",
+    "vue",
+    "vuejs",
+    "vue-js",
+    "ui",
+    "show-ui",
+    "vue-ui",
+    "vue-ui-component"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/tv-ui.es.js",
+      "require": "./dist/tv-ui.cjs.js"
+    },
+    "./style.css": "./dist/tv-ui.css",
+    "./nuxt": "./nuxt.js"
+  },
+  "main": "dist/tv-ui.cjs.js",
+  "module": "dist/tv-ui.es.js",
+  "types": "dist/tv-ui.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "nuxt.js"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "dist/*.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:demo": "cp README.md public/ && cp CHANGELOG.md public/ && VITE_BUILD_TARGET=demo vite build"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.27"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
+    "sass": "^1.97.2",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
