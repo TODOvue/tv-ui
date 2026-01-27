@@ -14,4 +14,5 @@ export const componentRegistry = {
   'settings': () => import('@todovue/tv-settings/demo'),
   'sidebar': () => import('@todovue/tv-sidebar/demo'),
   'themebutton': () => import('@todovue/tv-theme-button/demo'),
+  'toc': () => import('@todovue/tv-toc/demo'),
 };
