@@ -53,8 +53,8 @@
     "dist/*.css"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node scripts/copy-assets.js && vite",
+    "build": "node scripts/copy-assets.js && vite build",
     "build:demo": "cp README.md public/ && cp CHANGELOG.md public/ && VITE_BUILD_TARGET=demo vite build"
   },
   "peerDependencies": {
@@ -67,6 +67,7 @@
     "vite-plugin-dts": "^4.5.4"
   },
   "dependencies": {
+    "@todovue/tv-button": "^1.2.5",
     "@todovue/tv-demo": "^1.4.10",
     "@todovue/tv-label": "^1.2.3",
     "vue-router": "^4.6.4"
