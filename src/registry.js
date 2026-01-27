@@ -11,6 +11,7 @@ export const componentRegistry = {
   'pagination': () => import('@todovue/tv-pagination/demo'),
   'relativetime': () => import('@todovue/tv-relative-time/demo'),
   'search': () => import('@todovue/tv-search/demo'),
+  'settings': () => import('@todovue/tv-settings/demo'),
   'sidebar': () => import('@todovue/tv-sidebar/demo'),
   'themebutton': () => import('@todovue/tv-theme-button/demo'),
 };
