@@ -10,6 +10,7 @@ export const componentRegistry = {
   'modal': () => import('@todovue/tv-modal/demo'),
   'pagination': () => import('@todovue/tv-pagination/demo'),
   'relativetime': () => import('@todovue/tv-relative-time/demo'),
+  'scrolltop': () => import('@todovue/tv-scroll-top/demo'),
   'search': () => import('@todovue/tv-search/demo'),
   'settings': () => import('@todovue/tv-settings/demo'),
   'sidebar': () => import('@todovue/tv-sidebar/demo'),
