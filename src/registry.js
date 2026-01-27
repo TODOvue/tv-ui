@@ -9,5 +9,6 @@ export const componentRegistry = {
   'modal': () => import('@todovue/tv-modal/demo'),
   'relativetime': () => import('@todovue/tv-relative-time/demo'),
   'search': () => import('@todovue/tv-search/demo'),
+  'sidebar': () => import('@todovue/tv-sidebar/demo'),
   'themebutton': () => import('@todovue/tv-theme-button/demo'),
 };

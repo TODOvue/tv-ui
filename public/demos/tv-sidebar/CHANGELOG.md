@@ -1,0 +1,229 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [2.2.2] - 2026-01-27
+
+### Fixed
+- Remove base path configuration for demo environment.
+
+## [2.2.1] - 2026-01-27
+
+### Changed
+- Simplified the file list in `package.json` to include only essential assets.
+- Simplified the build configuration by removing demo-specific logic.
+- Enhanced GitHub Actions workflows to automate npm package publishing and GitHub release creation.
+- Moved the `@todovue/tv-demo` component import from main.js to `Demo.vue` to localize its usage.
+- Updated build commands to include `README.md` and `CHANGELOG.md` files in the public directory during the build process.
+
+### Added
+- Included the `src` directory in the `package.json` files list to ensure component source files are bundled in the package distribution.
+
+### Removed
+- Eliminated the global import of the `@todovue/tv-demo` component from `main.js`.
+
+### Dependencies
+- Updated `@todovue/tv-demo` to `^1.4.11`.
+- Updated `@todovue/tv-label` to `^1.2.3`.
+- Updated `vue` to `^3.5.27`.
+- Updated `sass` to `^1.97.3`.
+
+## [2.2.0] - 2026-01-20
+
+### Added
+- Added `isOutline` and `size` props to `TvSidebar` to control `TvLabel` appearance.
+- Added `searchable` prop to enable real-time search/filter functionality across all display modes (list, labels, image).
+- Added `searchPlaceholder` prop to customize the search input placeholder text.
+- Added `@search` event that emits the current search query whenever it changes.
+- Added text highlighting for search matches in list and label modes using `<mark>` tags.
+- Added search input UI with responsive styling for both dark and light modes.
+- Added two new demo variants showcasing searchable list and searchable labels functionality.
+- Added `grouped` prop to enable hierarchical organization of content with collapsible sections.
+- Added support for grouped/categorized mode with collapsible group headers and item counters.
+- Added smooth animations for expanding/collapsing groups.
+- Added search/filter functionality within grouped mode that filters across all groups.
+- Added three new demo variants showcasing grouped mode: basic, with search, and with limit.
+- Added grouped mode data structure documentation and usage examples.
+- Added `newLabelText` prop and `isNew` item property to show a customizable "New" badge on sidebar items.
+
+### Dependencies
+- Updated the `@todovue/tv-demo` dependency to `^1.4.4`.
+- Updated the `@todovue/tv-label` dependency to `^1.2.1`.
+- Updated the `sass` dependency to `^1.97.2`.
+- Updated the `vite` dependency to `^7.3.1`.
+
+### Changed
+- Refined component styling by adding consistent padding for better spacing.
+- Enhanced hover effects to provide clearer visual feedback during user interaction.
+
+### Removed
+- Eliminated the unused `clickLabel` event emission to clean up the component API and improve internal efficiency.
+
+## [2.1.2] - 2025-12-27
+
+### Added
+- Added automatic publishing to the TODOvue cPanel in `release.yml` for each release, simplifying package distribution and updates.
+- Added `package-lock.json` to the repository to ensure dependency consistency and facilitate version management across development and production environments.
+
+### Changed
+- Changed the `base` option in `vite.config.js` for website deployment in cpanel.
+
+### Fixed
+- Fixed repository URL in `package.json` to point to the correct GitHub repository.
+- Fixed the token configuration used to generate the package in the GitHub Actions workflow `release.yml`.
+
+### Dependencies
+- Updated dependency versions in `package.json` to maintain compatibility and benefit from improvements and bug fixes in the used libraries.
+
+## [2.1.1] - 2025-11-24
+
+### Changed
+- Updated background and text colors for dark and light themes to improve readability and visual comfort.
+
+### Dependencies
+- Updated the `@todovue/tv-demo` dependency to `^1.2.2` to ensure compatibility with the latest changes.
+
+### [2.1.0] - 2025-11-21
+
+### Added
+- Added `nux.js` configuration file for Nuxt 4 integration.
+- Added `tsconfig.json` for proper type checking during build.
+- Create `global.d.ts` to declare module for TypeScript users.
+- Added Nuxt module for automatic style injection and auto-registration of the `TvSidebar` component.
+- The `@todovue/tv-sidebar` component is now externalized from the final build, reducing bundle size.
+- Added `CHANGELOG.md` in script to generate demo and documentation site.
+
+### Dependencies
+- Updated the `@todovue/tv-demo` dependency to `^1.2.1` to ensure compatibility with the latest changes.
+- Updated the `@todovue/tv-label` dependency to `^1.1.1` to ensure compatibility with the latest changes.
+
+## [2.0.2] - 2025-11-15
+
+### Changed
+- Styles are now served as a separate CSS file (`dist/tv-sidebar.css`) generated by Vite during the build process.
+- Users must now explicitly import the stylesheet in their application:
+  - For Vue/Vite SPA: `import '@todovue/tv-sidebar/style.css'` in `main.ts`
+  - For Nuxt 3/4: Add `'@todovue/tv-sidebar/style.css'` to the `css` array in `nuxt.config.ts`
+
+### Added
+- Added `sideEffects` field to `package.json` to support proper tree-shaking with CSS files.
+- Added `./style.css` export path in `package.json` for explicit CSS imports.
+- Improved SSR/SSG compatibility, especially for Nuxt 3/4 applications.
+
+### Dependencies
+- Removed dependency on `vite-plugin-css-injected-by-js` from `devDependencies`
+
+## [2.0.1] - 2025-11-13
+
+### Fixed
+- Fixed list item styles and separator line appearance
+
+## [2.0.0] - 2025-11-13
+
+### Changed
+- **BREAKING**: Removed navigation functionality - component no longer uses router links
+- **BREAKING**: Removed `linkTag` prop - component now always emits events instead of navigating
+- List items now use `<span>` elements with click handlers instead of router components
+- All interactive elements (text items, labels, and images) now emit `click` event with the complete data object
+- Image mode now always emits click event with image object when clicked
+
+### Added
+- `clickItem` method in `useSidebar` composable to handle text item clicks
+- `clickImage` method in `useSidebar` composable to handle image clicks
+- Enhanced event emission: all item types (text, labels, images) now consistently emit the full object on click
+
+### Removed
+- `linkTag` prop (no longer needed without navigation)
+- `clickable` prop (no longer needed as all items are clickable by default)
+- `linkComponent` computed property from `useSidebar` composable
+- Router/Nuxt link dependencies
+
+### Fixed
+- Maintained original styling for text items after changing from router links to span elements
+- Proper color application for both dark and light modes
+- Consistent hover states and cursor pointers for all clickable elements
+
+## [1.0.0] - 2025-01-19
+
+### Added
+- Initial release of `@todovue/tv-sidebar` component
+- Three display modes:
+  - **Default List Mode**: Numbered list with links
+  - **Categories/Labels Mode**: Colored category labels with click events
+  - **Image Mode**: Display images with optional clickable links
+- Core props:
+  - `data` - Main data object for sidebar content
+  - `linkTag` - Support for both `router-link` (Vue Router) and `nuxt-link` (Nuxt)
+  - `isImage` - Enable image display mode
+  - `isLabel` - Enable categories/labels display mode
+  - `limit` - Control maximum number of items displayed
+  - `clickable` - Make images clickable in image mode
+- Events:
+  - `clickLabel` - Emitted when a label/category is clicked
+  - `click` - Native click passthrough
+- `useSidebar` composable for component logic:
+  - Dynamic link component resolution
+  - List limiting functionality
+  - Label click handling
+- SCSS styling with:
+  - Clean, minimal design
+  - Responsive layout
+  - Title with separator line
+  - Hover effects on links
+  - Proper spacing and typography
+- SSR compatibility (Nuxt 3 ready)
+- Tree-shakeable build with Vue as external dependency
+- TypeScript support with type definitions
+- Integration with `@todovue/tv-label` for category display
+- Demo playground with multiple examples:
+  - Default list view
+  - Default with item limit
+  - Categories view
+  - Categories with limit
+  - Image view
+  - Clickable image view
+- Comprehensive documentation:
+  - Installation guides for npm, yarn, and pnpm
+  - Quick start for SPA and Nuxt 3/SSR
+  - Component registration options
+  - Props and events documentation
+  - Usage examples for all modes
+  - Data structure specifications
+  - Styling and customization guide
+  - Router integration guide
+  - Accessibility notes
+
+### Features
+- Framework-agnostic sidebar component for Vue 3
+- Multiple layout options for different content types
+- Flexible routing system compatible with Vue Router and Nuxt
+- Responsive and accessible design
+- Zero DOM assumptions (SSR-safe)
+- No direct `window` or `document` access
+- Auto-imported styles when using the component
+- Semantic HTML structure
+- Keyboard navigation support
+- ARIA-compliant markup
+
+### Technical Details
+- Built with Vite
+- SCSS for styling with modular architecture
+- Composition API with composables
+- TypeScript entry point
+- ES Module and CommonJS builds
+- Minimal bundle size with external Vue dependency
+- Node.js >= 20.19.0 required
+
+[2.2.2]: https://github.com/TODOvue/tv-sidebar/pull/11/files
+[2.2.1]: https://github.com/TODOvue/tv-sidebar/pull/10/files
+[2.2.0]: https://github.com/TODOvue/tv-sidebar/pull/9/files
+[2.1.2]: https://github.com/TODOvue/tv-sidebar/pull/8/files
+[2.1.1]: https://github.com/TODOvue/tv-sidebar/pull/7/files
+[2.1.0]: https://github.com/TODOvue/tv-sidebar/pull/6/files
+[2.0.2]: https://github.com/TODOvue/tv-sidebar/pull/4/files
+[2.0.1]: https://github.com/TODOvue/tv-sidebar/pull/3/files
+[2.0.0]: https://github.com/TODOvue/tv-sidebar/pull/2/files
+[1.0.0]: https://github.com/TODOvue/tv-sidebar/pull/1/files
