@@ -3,4 +3,5 @@ export const componentRegistry = {
   'demo': () => import('@todovue/tv-demo/demo'),
   'label': () => import('@todovue/tv-label/demo'),
   'relativetime': () => import('@todovue/tv-relative-time/demo'),
+  'themebutton': () => import('@todovue/tv-theme-button/demo'),
 };
