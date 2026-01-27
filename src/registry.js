@@ -7,5 +7,6 @@ export const componentRegistry = {
   'label': () => import('@todovue/tv-label/demo'),
   'modal': () => import('@todovue/tv-modal/demo'),
   'relativetime': () => import('@todovue/tv-relative-time/demo'),
+  'search': () => import('@todovue/tv-search/demo'),
   'themebutton': () => import('@todovue/tv-theme-button/demo'),
 };
