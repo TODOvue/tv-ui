@@ -65,5 +65,9 @@
     "sass": "^1.97.2",
     "vite": "^7.3.1",
     "vite-plugin-dts": "^4.5.4"
+  },
+  "dependencies": {
+    "@todovue/tv-demo": "^1.4.10",
+    "vue-router": "^4.6.4"
   }
 }

@@ -12,6 +12,9 @@ export default defineConfig({
       outputDir: "dist",
       skipDiagnostics: false,
     })],
+  optimizeDeps: {
+    include: ["vue3-markdown-it"]
+  },
   build: isDemo
     ? {
       outDir: "dist-demo",
