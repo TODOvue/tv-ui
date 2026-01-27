@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import SlugDemo from '../docs/[slug].vue';
 
 const routes = [
   {
@@ -9,7 +10,7 @@ const routes = [
   {
     path: '/:slug',
     name: 'documentation',
-    component: import('../docs/[slug].vue'),
+    component: SlugDemo,
     props: true
   }
 ];

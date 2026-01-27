@@ -68,6 +68,7 @@
   },
   "dependencies": {
     "@todovue/tv-demo": "^1.4.10",
+    "@todovue/tv-label": "^1.2.3",
     "vue-router": "^4.6.4"
   }
 }

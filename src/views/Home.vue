@@ -6,7 +6,10 @@ import { RouterLink } from 'vue-router';
 <template>
   <ul>
     <li>
-      <RouterLink to="/demo">Ir a la demo de TodoVue UI</RouterLink>
+      <RouterLink to="/demo">@todovue/tv-demo</RouterLink>
+    </li>
+    <li>
+      <RouterLink to="/label">@todovue/tv-label</RouterLink>
     </li>
   </ul>
 </template>
