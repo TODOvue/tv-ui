@@ -24,6 +24,7 @@ if (useLocalAliases) {
 
 export default defineConfig({
   base: isDemo ? './' : undefined,
+  publicDir: isDemo ? 'public' : false,
   resolve: {
     alias: aliases
   },

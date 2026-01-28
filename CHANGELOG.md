@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Migrated component style imports to `style.scss` to improve project organization and maintainability.
+- Configured the `publicDir` path to dynamically adjust based on the detected demo environment settings.
 
 ### Added
 - Integrated the `useAlert` hook from the `@todovue/tv-alert` package to provide enhanced alert functionality across the application.
