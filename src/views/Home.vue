@@ -6,7 +6,7 @@ import GitHubIcon from '../assets/icons/github-white.svg';
 import TODOvueIcon from '../assets/icons/TODOvue.svg';
 import CrisDevIcon from '../assets/icons/CrisDev.png';
 
-const logoUi = 'https://res.cloudinary.com/denj4fg7f/image/upload/v1769571272/todovue_ui_xt3h5p.png'
+const logoUi = 'https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png'
 
 const router = useRouter();
 
@@ -69,7 +69,6 @@ const navigateTo = (link, isExternal = false) => {
 };
 
 const searchQuery = (query) => {
-  console.log(query);
   if (typeof query === 'string') {
     const { link } = components.find(c => c.title.toLowerCase().includes(query.toLowerCase()));
     if (link) {
