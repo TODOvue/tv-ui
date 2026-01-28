@@ -13,8 +13,8 @@ const router = useRouter();
 const menus = [
   {
     id: 1,
-    title: "TODOvue Blogs",
-    url: "/blogs"
+    title: "TODOvue Blog",
+    url: "/blog"
   }
 ]
 
@@ -38,7 +38,7 @@ const configFooter = {
   social: [
     {
       label: 'GitHub',
-      url: 'https://github.com/TODOvue',
+      url: 'https://github.com/TODOvue/tv-ui',
       iconUrl: GitHubIcon
     },
     {
