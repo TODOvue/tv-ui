@@ -50,7 +50,7 @@ export default defineConfig({
         formats: ["es", "cjs"]
       },
       rollupOptions: {
-        external: ["vue"],
+        external: ["vue", /@todovue\/.*/],
         output: {
           globals: {
             vue: "Vue"
