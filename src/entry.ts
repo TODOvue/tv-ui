@@ -1,7 +1,7 @@
 import type { App, Plugin } from 'vue'
 import './style.scss'
 
-import { TvAlert } from '@todovue/tv-alert'
+import { TvAlert, useAlert } from '@todovue/tv-alert'
 import { TvArticle } from '@todovue/tv-article'
 import { TvBreadcrumbs } from '@todovue/tv-breadcrumbs'
 import { TvButton } from '@todovue/tv-button'
@@ -73,7 +73,8 @@ export {
   TvSettings,
   TvSidebar,
   TvThemeButton,
-  TvToc
+  TvToc,
+  useAlert
 }
 
 export const TvUi: Plugin = {

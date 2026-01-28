@@ -8,7 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.1] - 2026-01-28
 
 ### Changed
-Migrated component style imports to `style.scss` to improve project organization and maintainability.
+- Migrated component style imports to `style.scss` to improve project organization and maintainability.
+
+### Added
+- Integrated the `useAlert` hook from the `@todovue/tv-alert` package to provide enhanced alert functionality across the application.
 
 ## [0.1.0] - 2026-01-27
 
