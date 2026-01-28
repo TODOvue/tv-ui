@@ -4,6 +4,7 @@ export const componentRegistry = {
   'button': () => import('@todovue/tv-button/demo'),
   'card': () => import('@todovue/tv-card/demo'),
   'demo': () => import('@todovue/tv-demo/demo'),
+  'footer': () => import('@todovue/tv-footer/demo'),
   'hero': () => import('@todovue/tv-hero/demo'),
   'label': () => import('@todovue/tv-label/demo'),
   'menu': () => import('@todovue/tv-menu/demo'),

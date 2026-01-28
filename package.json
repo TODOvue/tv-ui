@@ -72,6 +72,7 @@
     "@todovue/tv-button": "^1.2.5",
     "@todovue/tv-card": "^1.1.4",
     "@todovue/tv-demo": "^1.4.11",
+    "@todovue/tv-footer": "^1.1.1",
     "@todovue/tv-hero": "^1.2.1",
     "@todovue/tv-label": "^1.2.3",
     "@todovue/tv-menu": "^1.1.4",
