@@ -2,6 +2,12 @@
 import { useRouter } from 'vue-router'
 import { components } from '../utils/helpers';
 
+import GitHubIcon from '../assets/icons/github-white.svg';
+import TODOvueIcon from '../assets/icons/TODOvue.svg';
+import CrisDevIcon from '../assets/icons/CrisDev.png';
+
+const logoUi = 'https://res.cloudinary.com/denj4fg7f/image/upload/v1769571272/todovue_ui_xt3h5p.png'
+
 const router = useRouter();
 
 const menus = [
@@ -11,6 +17,42 @@ const menus = [
     url: "/blogs"
   }
 ]
+
+const configFooter = {
+  version: 'v1.0.0',
+  brand: {
+    logo: logoUi,
+    url: '/'
+  },
+  copyright: '© {year} TODOvue UI. Designed & Developed by cris-dev.com. All rights reserved.',
+  legal: [
+    {
+      label: 'TODOvue Blog',
+      url: 'https://todovue.blog',
+    },
+    {
+      label: 'CrisDev',
+      url: 'https://cris-dev.com',
+    }
+  ],
+  social: [
+    {
+      label: 'GitHub',
+      url: 'https://github.com/TODOvue',
+      iconUrl: GitHubIcon
+    },
+    {
+      label: 'TODOvue Blog',
+      url: 'https://todovue.blog',
+      iconUrl: TODOvueIcon
+    },
+    {
+      label: 'CrisDev',
+      url: 'https://cris-dev.com',
+      iconUrl: CrisDevIcon
+    }
+  ],
+}
 
 const handleClickMenu = (menu) => {
   if (menu?.url === '/blogs') {
@@ -44,7 +86,7 @@ const searchQuery = (query) => {
 <template>
   <div class="container-home">
     <tv-menu
-      image-menu="https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png"
+      :image-menu="logoUi"
       :menus="menus"
       placeholder="Search component..."
       title-button="Search"
@@ -72,6 +114,10 @@ const searchQuery = (query) => {
       </template>
     </main>
   </div>
+  <tv-footer
+    :config="configFooter"
+  />
+  <tv-scroll-top />
 </template>
 
 <style scoped>
@@ -86,5 +132,6 @@ const searchQuery = (query) => {
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+  margin-bottom: 1.5rem;
 }
 </style>
