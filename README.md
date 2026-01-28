@@ -152,26 +152,26 @@ import { TvButton } from '@todovue/tv-ui'
 ## Exported components
 Currently `@todovue/tv-ui` re-exports:
 
-- `TvAlert`
-- `TvArticle`
-- `TvBreadcrumbs`
-- `TvButton`
-- `TvCard`
-- `TvDemo`
-- `TvFooter`
-- `TvHero`
-- `TvLabel`
-- `TvMenu`
-- `TvModal`
-- `TvPagination`
-- `TvProgressBar`
-- `TvRelativeTime`
-- `TvScrollTop`
-- `TvSearch`
-- `TvSettings`
-- `TvSidebar`
-- `TvThemeButton`
-- `TvToc`
+- `TvAlert` - [GitHub](https://github.com/TODOvue/tv-alert) | [Demo](https://ui.todovue.blog/alert)
+- `TvArticle` - [GitHub](https://github.com/TODOvue/tv-article) | [Demo](https://ui.todovue.blog/article)
+- `TvBreadcrumbs` - [GitHub](https://github.com/TODOvue/tv-breadcrumbs) | [Demo](https://ui.todovue.blog/breadcrumbs)
+- `TvButton` - [GitHub](https://github.com/TODOvue/tv-button) | [Demo](https://ui.todovue.blog/button)
+- `TvCard` - [GitHub](https://github.com/TODOvue/tv-card) | [Demo](https://ui.todovue.blog/card)
+- `TvDemo` - [GitHub](https://github.com/TODOvue/tv-demo) | [Demo](https://ui.todovue.blog/demo)
+- `TvFooter` - [GitHub](https://github.com/TODOvue/tv-footer) | [Demo](https://ui.todovue.blog/footer)
+- `TvHero` - [GitHub](https://github.com/TODOvue/tv-hero) | [Demo](https://ui.todovue.blog/hero)
+- `TvLabel` - [GitHub](https://github.com/TODOvue/tv-label) | [Demo](https://ui.todovue.blog/label)
+- `TvMenu` - [GitHub](https://github.com/TODOvue/tv-menu) | [Demo](https://ui.todovue.blog/menu)
+- `TvModal` - [GitHub](https://github.com/TODOvue/tv-modal) | [Demo](https://ui.todovue.blog/modal)
+- `TvPagination` - [GitHub](https://github.com/TODOvue/tv-pagination) | [Demo](https://ui.todovue.blog/pagination)
+- `TvProgressBar` - [GitHub](https://github.com/TODOvue/tv-progress-bar) | [Demo](https://ui.todovue.blog/progressbar)
+- `TvRelativeTime` - [GitHub](https://github.com/TODOvue/tv-relative-time) | [Demo](https://ui.todovue.blog/relativetime)
+- `TvScrollTop` - [GitHub](https://github.com/TODOvue/tv-scroll-top) | [Demo](https://ui.todovue.blog/scrolltop)
+- `TvSearch` - [GitHub](https://github.com/TODOvue/tv-search) | [Demo](https://ui.todovue.blog/search)
+- `TvSettings` - [GitHub](https://github.com/TODOvue/tv-settings) | [Demo](https://ui.todovue.blog/settings)
+- `TvSidebar` - [GitHub](https://github.com/TODOvue/tv-sidebar) | [Demo](https://ui.todovue.blog/sidebar)
+- `TvThemeButton` - [GitHub](https://github.com/TODOvue/tv-theme-button) | [Demo](https://ui.todovue.blog/themebutton)
+- `TvToc` - [GitHub](https://github.com/TODOvue/tv-toc) | [Demo](https://ui.todovue.blog/toc)
 
 ## Registration options
 | Approach            | Example                                     | When to use                                          |
