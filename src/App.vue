@@ -21,4 +21,5 @@ provide('TV_DEMO_CONTEXT', {
 
 <template>
   <router-view />
+  <tv-scroll-top />
 </template>
