@@ -35,7 +35,7 @@ export default defineConfig({
       skipDiagnostics: false,
     })],
   optimizeDeps: {
-    include: ["vue3-markdown-it"]
+    include: ["vue3-markdown-it", "highlight.js", "markdown-it"]
   },
   build: isDemo
     ? {

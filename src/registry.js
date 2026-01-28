@@ -1,5 +1,6 @@
 export const componentRegistry = {
   'alert': () => import('@todovue/tv-alert/demo'),
+  'article': () => import('@todovue/tv-article/demo'),
   'breadcrumbs': () => import('@todovue/tv-breadcrumbs/demo'),
   'button': () => import('@todovue/tv-button/demo'),
   'card': () => import('@todovue/tv-card/demo'),
