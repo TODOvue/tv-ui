@@ -54,7 +54,6 @@ const copyAssets = () => {
 
       if (fs.existsSync(srcFile)) {
         fs.copyFileSync(srcFile, destFile);
-        console.log(`Copied ${file} for ${name}`);
       }
     });
   });
