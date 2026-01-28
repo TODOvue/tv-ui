@@ -19,7 +19,7 @@ const menus = [
 ]
 
 const configFooter = {
-  version: 'v1.0.0',
+  version: 'v0.1.1',
   brand: {
     logo: logoUi,
     url: '/'
