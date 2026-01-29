@@ -4,7 +4,7 @@
   "author": "Cristhian Daza",
   "description": "UI component library for TODOvue application",
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "homepage": "https://ui.todovue.blog",
   "repository": {
