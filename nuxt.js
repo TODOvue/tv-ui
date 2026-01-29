@@ -1,4 +1,3 @@
-
 import { defineNuxtModule } from '@nuxt/kit'
 
 export default defineNuxtModule({
@@ -6,7 +5,19 @@ export default defineNuxtModule({
     name: '@todovue/tv-ui',
     configKey: 'tvUi'
   },
-  setup(_options, nuxt) {
+  async setup(_options, nuxt) {
+    const {createRequire} = await import('module');
+    const require = createRequire(import.meta.url);
+    
+    nuxt.options.vite.resolve = nuxt.options.vite.resolve || {};
+    nuxt.options.vite.resolve.alias = nuxt.options.vite.resolve.alias || {};
+    
+    Object.assign(nuxt.options.vite.resolve.alias, {
+      'highlight.js': require.resolve('highlight.js').replace('index.js', 'common.js'),
+      'markdown-it': require.resolve('markdown-it').replace('index.js', 'dist/markdown-it.min.js'),
+      'vue3-markdown-it': require.resolve('vue3-markdown-it')
+    });
+    
     const alertCss = '@todovue/tv-alert/style.css';
     const articleCss = '@todovue/tv-article/style.css';
     const breadcrumbsCss = '@todovue/tv-breadcrumbs/style.css';
