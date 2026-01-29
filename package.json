@@ -55,7 +55,7 @@
   "scripts": {
     "dev": "node scripts/copy-assets.js && vite",
     "build": "vite build",
-    "build:demo": "cp README.md public/ && cp CHANGELOG.md public/ && VITE_BUILD_TARGET=demo vite build"
+    "build:demo": "VITE_BUILD_TARGET=demo vite build"
   },
   "peerDependencies": {
     "vue": "^3.5.27"
@@ -87,6 +87,8 @@
     "@todovue/tv-sidebar": "^2.2.2",
     "@todovue/tv-theme-button": "^1.2.1",
     "@todovue/tv-toc": "^1.1.1",
+    "highlight.js": "^11.11.1",
+    "markdown-it": "^13.0.2",
     "vue-router": "^4.6.4"
   }
 }
