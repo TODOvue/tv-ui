@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { components } from '../utils/helpers';
 
@@ -10,6 +11,8 @@ const logoUi = 'https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uq
 
 const router = useRouter();
 
+const content = ref(null);
+
 const menus = [
   {
     id: 1,
@@ -19,7 +22,7 @@ const menus = [
 ]
 
 const configFooter = {
-  version: 'v0.1.1',
+  version: 'v0.1.2',
   brand: {
     logo: logoUi,
     url: '/'
@@ -83,39 +86,42 @@ const searchQuery = (query) => {
 </script>
 
 <template>
-  <div class="container-home">
-    <tv-menu
-      :image-menu="logoUi"
-      :menus="menus"
-      placeholder="Search component..."
-      title-button="Search"
-      :results="components"
-      @click-menu="handleClickMenu"
-      @search-menu="searchQuery"
-    />
-    <main class="container-cards">
-      <template
-        v-for="{ link, image, title, description, id, source } in components"
-        :key="id"
-      >
-        <tv-card
-          :config-card="{
-            title,
-            description,
-            alt: `image-${title}`,
-            image,
-            primaryButtonText: 'View Demo',
-            secondaryButtonText: 'View Source',
-          }"
-          @clickButton="navigateTo(link)"
-          @clickSecondaryButton="navigateTo(source, true)"
+  <tv-progress-bar :target="content"/>
+    <div ref="content">
+      <div class="container-home">
+        <tv-menu
+          :image-menu="logoUi"
+          :menus="menus"
+          placeholder="Search component..."
+          title-button="Search"
+          :results="components"
+          @click-menu="handleClickMenu"
+          @search-menu="searchQuery"
         />
-      </template>
-    </main>
-  </div>
-  <tv-footer
-    :config="configFooter"
-  />
+        <main class="container-cards">
+          <template
+            v-for="{ link, image, title, description, id, source } in components"
+            :key="id"
+          >
+            <tv-card
+              :config-card="{
+                title,
+                description,
+                alt: `image-${title}`,
+                image,
+                primaryButtonText: 'View Demo',
+                secondaryButtonText: 'View Source',
+              }"
+              @clickButton="navigateTo(link)"
+              @clickSecondaryButton="navigateTo(source, true)"
+            />
+          </template>
+        </main>
+      </div>
+      <tv-footer
+        :config="configFooter"
+      />
+    </div>
   <tv-scroll-top />
 </template>
 
