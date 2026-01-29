@@ -87,6 +87,8 @@
     "@todovue/tv-sidebar": "^2.2.2",
     "@todovue/tv-theme-button": "^1.2.1",
     "@todovue/tv-toc": "^1.1.1",
+    "highlight.js": "^11.11.1",
+    "markdown-it": "^13.0.2",
     "vue-router": "^4.6.4"
   }
 }

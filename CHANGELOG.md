@@ -5,6 +5,12 @@ All notable changes to `@todovue/tv-ui` will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-01-28
+
+### Dependencies
+- Added `highlight.js` as a dependency to support syntax highlighting features within the UI components.
+- Added `markdown-it` as a dependency to enable markdown parsing and rendering capabilities.
+
 ## [0.1.1] - 2026-01-28
 
 ### Changed
@@ -18,3 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Initial release of `@todovue/tv-ui`.
+
+[0.1.2]: https://github.com/TODOvue/tv-ui/pull/3/changes
+[0.1.1]: https://github.com/TODOvue/tv-ui/pull/2/changes
+[0.1.0]: https://github.com/TODOvue/tv-ui/pull/1/changes
