@@ -55,7 +55,7 @@ const configFooter = {
 }
 
 const handleClickMenu = (menu) => {
-  if (menu?.url === '/blogs') {
+  if (menu?.url === '/blog') {
     window.open('https://todovue.blog/', '_self')
   }
 };
