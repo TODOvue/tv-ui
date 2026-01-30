@@ -5,6 +5,14 @@ All notable changes to `@todovue/tv-progress-bar` will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2] - 2026-01-29
+
+### Fixed
+- Corrected floating label positioning calculations to ensure proper alignment within input fields.
+
+### Added
+- Introduced a loader mode with a `modelValue` prop to allow for external control of progress state.
+
 ## [1.1.1] - 2026-01-27
 
 ### Changed
@@ -79,6 +87,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive documentation and usage examples
 - Demo playground with multiple configuration examples
 
+[1.1.2]: https://github.com/TODOvue/tv-progress-bar/pull/4/files
 [1.1.1]: https://github.com/TODOvue/tv-progress-bar/pull/3/files
 [1.1.0]: https://github.com/TODOvue/tv-progress-bar/pull/2/files
 [1.0.0]: https://github.com/TODOvue/tv-progress-bar/pull/1/files

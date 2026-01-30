@@ -212,6 +212,7 @@ import { TvProgressBar } from '@todovue/tv-progress-bar'
 | showLabel     | Boolean          | false                                            | Whether to show the percentage label.                           |
 | labelPosition | String           | 'inside'                                         | Label position: 'inside' or 'floating'.                         |
 | checkpoints   | Array            | []                                               | Array of numbers (0-100) to show indicators on the bar.         |
+| modelValue    | Number           | null                                             | Sets the progress manually (0-100). Overrides scroll tracking.  |
 
 ### Prop Details
 
@@ -722,6 +723,38 @@ const articleContainer = ref(null)
     </footer>
   </div>
 </template>
+
+### Loader Mode
+Use the `modelValue` prop to manually control the progress, making it function like a loader.
+
+```vue
+<script setup>
+import { ref, onMounted } from 'vue'
+import { TvProgressBar } from '@todovue/tv-progress-bar'
+
+const progress = ref(0)
+const isLoading = ref(true)
+
+onMounted(() => {
+  const interval = setInterval(() => {
+    if (progress.value < 100) {
+      progress.value += 1
+    } else {
+      clearInterval(interval)
+      isLoading.value = false
+    }
+  }, 50)
+})
+</script>
+
+<template>
+  <TvProgressBar 
+    :model-value="progress"
+    :show-label="true"
+    color="#3b82f6"
+  />
+</template>
+```
 ```
 
 ### Conditional Rendering

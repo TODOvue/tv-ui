@@ -1,0 +1,43 @@
+name: Deploy in Develop
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Demo Website
+        run: npm run build:demo
+
+      - name: Create robots.txt for development
+        run: 'echo -e "User-agent: *\nDisallow: /" > ./dist-demo/robots.txt'
+
+      - name: Deploy TODOvue UI Develop
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist-demo/
+          server-dir: ${{ secrets.FTP_DIR_DEVELOP }}
+          dangerous-clean-slate: true
