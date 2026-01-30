@@ -86,7 +86,7 @@ const searchQuery = (query) => {
 </script>
 
 <template>
-  <tv-progress-bar :target="content"/>
+  <tv-progress-bar :target="content" height="6px" />
     <div ref="content">
       <div class="container-home">
         <tv-menu
