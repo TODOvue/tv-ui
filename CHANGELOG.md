@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated `@todovue/tv-toc` to version `1.2.0`.
 - Updated `@todovue/tv-footer` to version `1.1.2`.
 - Updated `@todovue/tv-menu` to version `1.1.5`.
+- Updated `@todovue/tv-article` to version `1.3.5`.
 
 ## [0.1.3] - 2026-01-28
 
