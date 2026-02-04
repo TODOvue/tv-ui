@@ -30,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Dependencies
 - Added `highlight.js` as a dependency to support syntax highlighting features within the UI components.
-- Added `markdown-it` as a dependency to enable markdown parsing and rendering capabilities.
+- Added `markdown-it` as a dependency to enable Markdown parsing and rendering capabilities.
 
 ### Changed
 - Simplified the `build:demo` script by removing redundant file copy commands.
