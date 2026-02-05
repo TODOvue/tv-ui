@@ -5,6 +5,12 @@ All notable changes to `@todovue/tv-footer` will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.3] - 2026-02-04
+
+## Changed
+- Changed container display to `inline-flex` for improved layout handling.
+- Adjusted button styles to align with updated design specifications.
+
 ## [1.1.2] - 2026-01-30
 
 ### Added
@@ -70,6 +76,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Backdrop blur effect on social icons
 - Comprehensive documentation and examples
 
+[1.1.3]: https://github.com/TODOvue/tv-footer/pull/5/files
 [1.1.2]: https://github.com/TODOvue/tv-footer/pull/4/files
 [1.1.1]: https://github.com/TODOvue/tv-footer/pull/3/files
 [1.1.0]: https://github.com/TODOvue/tv-footer/pull/2/files
