@@ -5,6 +5,13 @@ All notable changes to `@todovue/tv-ui` will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-02-04
+
+### Dependencies
+- Updated `@vitejs/plugin-vue` to version `6.0.4`.
+- Updated `@todovue/tv-foote` to version `1.1.3`.
+- Updated `@todovue/tv-article` to version `1.3.6`.
+
 ## [1.0.0] - 2026-01-30
 
 ### Dependencies
@@ -24,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Dependencies
 - Added `highlight.js` as a dependency to support syntax highlighting features within the UI components.
-- Added `markdown-it` as a dependency to enable markdown parsing and rendering capabilities.
+- Added `markdown-it` as a dependency to enable Markdown parsing and rendering capabilities.
 
 ### Changed
 - Simplified the `build:demo` script by removing redundant file copy commands.
@@ -43,6 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of `@todovue/tv-ui`.
 
+[1.0.1]: https://github.com/TODOvue/tv-ui/pull/6/changes
 [1.0.0]: https://github.com/TODOvue/tv-ui/pull/5/changes
 [0.1.3]: https://github.com/TODOvue/tv-ui/pull/4/changes
 [0.1.2]: https://github.com/TODOvue/tv-ui/pull/3/changes

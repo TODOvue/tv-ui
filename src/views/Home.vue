@@ -22,7 +22,7 @@ const menus = [
 ]
 
 const configFooter = {
-  version: 'v0.1.2',
+  version: 'v1.0.0',
   brand: {
     logo: logoUi,
     url: '/'
@@ -58,8 +58,12 @@ const configFooter = {
 }
 
 const handleClickMenu = (menu) => {
-  if (menu?.url === '/blog') {
-    window.open('https://todovue.blog/', '_self')
+  if (['/blog', 'https://todovue.blog'].includes(menu?.url)) {
+    window.open('https://todovue.blog/', '_self');
+  } else if (menu?.url === '/') {
+    router.push('/');
+  } else if (menu?.url) {
+    window.open(menu.url, '_blank');
   }
 };
 
@@ -120,6 +124,7 @@ const searchQuery = (query) => {
       </div>
       <tv-footer
         :config="configFooter"
+        @link-click="handleClickMenu"
       />
     </div>
   <tv-scroll-top />
